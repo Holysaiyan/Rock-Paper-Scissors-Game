@@ -28,11 +28,20 @@ scissors = '''
 '''
 
 #Write your code below this line 👇
+initial_game = False
 end_of_game = False
 player_score = 0
 computer_score = 0
-turns = 3
-necessary_wins = int(turns/2) + 1
+
+while not initial_game:
+    turns = int(input("How many games do you want to play? 3 or 5? \n"))
+    if turns == 3 or turns == 5:
+        initial_game = True
+    else:
+        print(f"unfortunately {turns} was not part of the option, you will have to wait for future updates, please try again")
+        
+    necessary_wins = int(turns/2) + 1
+    continue
 
 while not end_of_game:
     game_images = [rock,paper,scissors]
@@ -56,7 +65,7 @@ while not end_of_game:
     
     print(map_user_computer)
     
-    # COME BACK TO ADD SCOREBOARD AND BEST OUT OF 3
+    # Score Board
     
     
     if map_user_computer == "User wins":
