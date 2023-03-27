@@ -1,4 +1,5 @@
 import random
+
 from rockpaperscissors_images import rock, paper, scissors, logo
 
 print(logo)
@@ -8,8 +9,6 @@ while True:
     player_score = 0
     computer_score = 0
 
-
-
     # Ask User how many games they want to play between 3 or 5
 
     while not initial_game:
@@ -18,7 +17,6 @@ while True:
             initial_game = True
         else:
             print(f"unfortunately {turns} was not part of the option, please try again")
-
         necessary_wins = int(turns / 2) + 1
 
     while not end_of_game:
